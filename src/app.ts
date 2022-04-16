@@ -2,7 +2,7 @@ import express, { Application, Request, Response } from "express";
 import dayjs from "dayjs";
 const app: Application = express();
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.get("/", (req: Request, res: Response) => {
   res.status(200).send(`<h1>Hello worldddd</h1>`);
